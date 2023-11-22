@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FifteenDays</string>
+    <string name="bismuto">Bismuto</string>
+    <string name="bismuto_variante">Variante de bismuto</string>
+    <string name="criscola_malaquita">Criscola de malaquita</string>
+    <string name="cuarzo_titanio">Cuarzo de titanio</string>
+    <string name="escolecita">Escolecita</string>
+    <string name="fluorita">Fluorita</string>
+    <string name="geoda_cuarzo">Geoda de cuarzo</string>
+    <string name="opalo_fosil">Ópalo fósil</string>
+    <string name="opalo_fuego">Ópalo de fuego</string>
+    <string name="opalo_galaxia">Ópalo Galaxia</string>
+    <string name="opalo_negro">Ópalo negro</string>
+    <string name="opalo_oceanico">Ópalo oceánico</string>
+    <string name="rodocrosita">Rodocrosita</string>
+    <string name="turmalina_birmarina">Turmalina birmarina</string>
+    <string name="turmalina_sandia">Turmalina Sandia</string>
+</resources>
