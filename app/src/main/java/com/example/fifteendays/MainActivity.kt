@@ -14,6 +14,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -51,17 +54,18 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-/**
- * Composable that displays an app bar and a list of dogs.
- */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun fifteenDaysApp() {
-    Scaffold (
+    Scaffold(
         topBar = {
-            WoofTopAppBar()
+            MineralTopAppBar()
         }
-    ) { it->
-        LazyColumn (contentPadding = it){
+    ) { contentPadding ->
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(3),
+            contentPadding = contentPadding
+        ) {
             items(minerales) {
                 MineralItem(
                     mineral = it,
@@ -73,12 +77,7 @@ fun fifteenDaysApp() {
     }
 }
 
-/**
- * Composable that displays a list item containing a dog icon and their information.
- *
- * @param dog contains the data that populates the list item
- * @param modifier modifiers to set to this composable
- */
+
 @Composable
 fun MineralItem(
     mineral: Mineral,
@@ -86,23 +85,17 @@ fun MineralItem(
 ) {
     Card (modifier = modifier
         .clip(MaterialTheme.shapes.medium)){
-        Row(
+        Column(
             modifier = modifier
                 .fillMaxWidth()
                 .padding(dimensionResource(R.dimen.padding_small))
         ) {
             MineralIcon(mineral.imageResourceId)
-            DogInformation(mineral.name, mineral.age)
+            MineralInformation(mineral.name, mineral.hardness, mineral.description)
         }
     }
 }
 
-/**
- * Composable that displays a photo of a dog.
- *
- * @param dogIcon is the resource ID for the image of the dog
- * @param modifier modifiers to set to this composable
- */
 @Composable
 fun MineralIcon(
     @DrawableRes mineralIcon: Int,
@@ -112,49 +105,42 @@ fun MineralIcon(
         modifier = modifier
             .size(dimensionResource(R.dimen.image_size))
             .padding(dimensionResource(R.dimen.padding_small))
-            .clip(MaterialTheme.shapes.small),
+            .clip(MaterialTheme.shapes.medium),
         contentScale = ContentScale.Crop,
         painter = painterResource(mineralIcon),
-
-        // Content Description is not needed here - image is decorative, and setting a null content
-        // description allows accessibility services to skip this element during navigation.
 
         contentDescription = null
     )
 }
 
-/**
- * Composable that displays a dog's name and age.
- *
- * @param mineralName is the resource ID for the string of the dog's name
- * @param mineralAge is the Int that represents the dog's age
- * @param modifier modifiers to set to this composable
- */
 @Composable
-fun DogInformation(
+fun MineralInformation(
     @StringRes mineralName: Int,
     mineralAge: Int,
+    mineralDescription: Int,
     modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier) {
         Text(
             text = stringResource(mineralName),
-            style = MaterialTheme.typography.displayMedium,
+            style = MaterialTheme.typography.bodyLarge,
             modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
         )
         Text(
-            text = stringResource(R.string.years_old, mineralAge),
-            style = MaterialTheme.typography.bodyLarge
+            text = stringResource(R.string.hardness, mineralAge),
+            style = MaterialTheme.typography.bodyMedium
+        )
+        Text(text = stringResource(mineralDescription),
+            style = MaterialTheme.typography.bodySmall,
+            modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
         )
     }
 }
 
-/**
- * Composable that displays what the UI of the app looks like in light theme in the design tab.
- */
+
 @Preview
 @Composable
-fun WoofPreview() {
+fun MineralPreview() {
     FifteenDaysTheme(darkTheme = false) {
         fifteenDaysApp()
     }
@@ -162,7 +148,7 @@ fun WoofPreview() {
 
 @Preview
 @Composable
-fun WoofDarkPreview() {
+fun MineralDarkPreview() {
     FifteenDaysTheme(darkTheme = true) {
         fifteenDaysApp()
     }
@@ -170,20 +156,20 @@ fun WoofDarkPreview() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WoofTopAppBar(modifier: Modifier = Modifier){
+fun MineralTopAppBar(modifier: Modifier = Modifier){
     CenterAlignedTopAppBar(
         title = {
             Row(verticalAlignment = Alignment.CenterVertically){
                 Image(
                     modifier = Modifier
-                        .size(dimensionResource(id = R.dimen.image_size))
+                        .size(dimensionResource(id = R.dimen.image_size_top_bar))
                         .padding(dimensionResource(id = R.dimen.padding_small)),
-                    painter = painterResource(R.drawable.ic_woof_logo),
+                    painter = painterResource(R.drawable.icon),
                     contentDescription = null
                 )
                 Text(
                     text = stringResource(id = R.string.app_name),
-                    style = MaterialTheme.typography.displayLarge
+                    style = MaterialTheme.typography.displayMedium
                 )
             }
         }
@@ -193,5 +179,5 @@ fun WoofTopAppBar(modifier: Modifier = Modifier){
 @Preview
 @Composable
 fun MineralItemPreview(){
-    MineralItem(Mineral(R.drawable.koda, R.string.dog_name_1, 2, R.string.dog_description_1))
+    MineralItem(Mineral(R.drawable.mineral10, R.string.mineral10, 2, R.string.mineral_description_1))
 }

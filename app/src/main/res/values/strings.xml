@@ -1,18 +1,37 @@
 <resources>
     <string name="app_name">FifteenDays</string>
-    <string name="bismuto">Bismuto</string>
-    <string name="bismuto_variante">Variante de bismuto</string>
-    <string name="criscola_malaquita">Criscola de malaquita</string>
-    <string name="cuarzo_titanio">Cuarzo de titanio</string>
-    <string name="escolecita">Escolecita</string>
-    <string name="fluorita">Fluorita</string>
-    <string name="geoda_cuarzo">Geoda de cuarzo</string>
-    <string name="opalo_fosil">Ópalo fósil</string>
-    <string name="opalo_fuego">Ópalo de fuego</string>
-    <string name="opalo_galaxia">Ópalo Galaxia</string>
-    <string name="opalo_negro">Ópalo negro</string>
-    <string name="opalo_oceanico">Ópalo oceánico</string>
-    <string name="rodocrosita">Rodocrosita</string>
-    <string name="turmalina_birmarina">Turmalina birmarina</string>
-    <string name="turmalina_sandia">Turmalina Sandia</string>
+    <string name="mineral1">Bismuto</string>
+    <string name="mineral2">Variante de bismuto</string>
+    <string name="mineral3">Crisocola de malaquita</string>
+    <string name="mineral4">Cuarzo de titanio</string>
+    <string name="mineral5">Escolecita</string>
+    <string name="mineral6">Fluorita</string>
+    <string name="mineral7">Geoda de cuarzo</string>
+    <string name="mineral8">Ópalo fósil</string>
+    <string name="mineral9">Rubí</string>
+    <string name="mineral10">Esmeralda</string>
+    <string name="mineral11">Zafiro</string>
+    <string name="mineral12">Platino</string>
+    <string name="mineral13">Rodocrosita</string>
+    <string name="mineral14">Turmalina birmarina</string>
+    <string name="mineral15">Turmalina Sandia</string>
+
+    <string name="hardness">%d escala de mohs</string>
+
+    <string name="mineral_description_1">El bismuto es un elemento químico de la tabla periódica cuyo símbolo es Bi, su número atómico es 83 y se encuentra en el grupo 15 del sistema periódico.</string>
+    <string name="mineral_description_2">El bismuto es un elemento químico de la tabla periódica cuyo símbolo es Bi, su número atómico es 83 y se encuentra en el grupo 15 del sistema periódico.</string>
+    <string name="mineral_description_3">Pieza formada por matriz formada parcialmente por malaquita. La crisocola se presenta recubriendo a dicha malaquita, en forma de pequeños agregados globulares de color azul claro.</string>
+    <string name="mineral_description_4">El cuarzo es un mineral compuesto de sílice (SiO2). Tras el feldespato es el mineral más común de la corteza terrestre estando presente en una gran cantidad de rocas ígneas, metamórficas y sedimentarias.</string>
+    <string name="mineral_description_5">La escolecita, también llamada ellagita, es un mineral de la clase de los tectosilicatos y del grupo de las zeolitas. El nombre viene del griego skolec en referencia a la forma que adopta la llama al quemarlo con soplete.</string>
+    <string name="mineral_description_6">La fluorita es un mineral del grupo III según la clasificación de Strunz, formado por la combinación de los elementos calcio y flúor, de fórmula CaF₂. Su estructura cristalina pertenece al sistema cúbico.</string>
+    <string name="mineral_description_7">Una geoda es una cavidad rocosa, normalmente cerrada, y totalmente tapizada con cristales (a menudo automórficos) y otras materias minerales. No es realmente un mineral sino una composición de formaciones magmáticas, cristalinas y/o sedimentarias.</string>
+    <string name="mineral_description_8">El ópalo es un mineraloide que por razones históricas sigue siendo registrado como mineral, a pesar de no ser un mineral propiamente dicho al estar variablemente compuesto por material pobremente cristalino.</string>
+    <string name="mineral_description_9">El rubí es un mineral de la clase 04 (óxidos), según la clasificación de Strunz. Es una gema de color rojizo; si es morado, se llama balaje.</string>
+    <string name="mineral_description_10">La esmeralda es la variedad verde del berilo, un mineral ciclosilicato de berilio y aluminio de fórmula química Be3Al2(SiO3)6, que contiene además pequeñas cantidades de cromo y, en algunos casos, vanadio, que le proporcionan su característico color verde.</string>
+    <string name="mineral_description_11">El zafiro es una variedad del mineral corindón, con característico color azul, aunque hay otros colores menos comunes, debido a impurezas de ciertos óxidos (Cr (III) y Ti(III)).</string>
+    <string name="mineral_description_12">El platino es un elemento químico de número atómico 78, situado en el grupo 10 de la tabla periódica de los elementos. Su símbolo es Pt. Se trata de un metal de transición blanco grisáceo, precioso, pesado, maleable y dúctil. </string>
+    <string name="mineral_description_13">La rodocrosita es un mineral poco abundante del grupo V (carbonatos), según la clasificación de Strunz. Es un carbonato de manganeso (II) (MnCO3).</string>
+    <string name="mineral_description_14">Turmalina es el nombre de un grupo de minerales de la clase IX (silicatos), según la clasificación de Strunz, grupo de los ciclosilicatos. Tiene una fórmula química muy compleja: (Na,Ca)(Al,Fe,Li)(Al,Mg,Mn)6(BO3)3(Si6O18).(OH,F)4. </string>
+    <string name="mineral_description_15">Turmalina es el nombre de un grupo de minerales de la clase IX (silicatos), según la clasificación de Strunz, grupo de los ciclosilicatos. Tiene una fórmula química muy compleja: (Na,Ca)(Al,Fe,Li)(Al,Mg,Mn)6(BO3)3(Si6O18).(OH,F)4. </string>
+
 </resources>

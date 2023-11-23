@@ -2,14 +2,22 @@ package com.example.fifteendays.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.fifteendays.R
 
 // Set of Material typography styles to start with
+    val Nunito = FontFamily(
+        Font(R.font.nunito_regular),
+        Font(R.font.nunito_medium),
+        Font(R.font.nunito_bold, FontWeight.Bold)
+)
+
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = Nunito,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
